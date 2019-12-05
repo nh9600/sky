@@ -22,7 +22,6 @@ public class UserController {
 	@GetMapping("/users")
 	public String getUserList(Model m,@ModelAttribute UserVO user){
 		m.addAttribute("users",udao.getUserList(user));
-		log.debug("user:{}", user);
 		return "user/list";
 	}
 
